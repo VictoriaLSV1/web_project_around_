@@ -13,21 +13,21 @@
       <header class="header">
         <img
           class="header__logo"
-          src="/web_project_around/images/logo.svg"
+          src="./images/logo.svg"
           alt="Logotipo Around US"
         />
       </header>
       <section class="profile">
         <div class="profile__info">
           <img src="images/avatar.png" alt="" class="profile__avatar" />
-          <div class="profile__info__text">
+          <div class="profile__info-text">
             <div class="profile__name">
-              <h1 class="profile__name__text">Jacques Cousteau</h1>
-              <button class="profile__name__edit-button" aria-label="Editar">
+              <h1 class="profile__name-text">Jacques Cousteau</h1>
+              <button class="profile__name-edit-button" aria-label="Editar">
                 <img
                   src="images/edit-button.png"
                   alt=""
-                  class="profile__name__edit-button-image"
+                  class="profile__name-edit-button-image"
                 />
               </button>
             </div>
@@ -121,28 +121,38 @@
       </footer>
       <section class="popup">
         <div class="popup__container">
-          <img
-            src="images/close-button.png"
-            class="popup__close-button"
-            alt="Fechar"
-          />
-          <form class="popup__form">
-            <p class="popup__text">Editar perfil</p>
-            <input
-              id="name"
-              type="text"
-              class="popup__form-elements"
-              placeholder="Nome"
+          <button type="button" class="popup__close-button">
+            <img
+              src="./images/close-button.png"
+              class="popup__close-icon"
+              alt="Botão de fechar"
             />
-            <input
-              id="about"
-              type="text"
-              class="popup__form-elements"
-              placeholder="Sobre mim"
-            /><button aria-label="Salvar" class="popup__submit">Salvar</button>
+          </button>
+          <h2 class="popup__container-title">Editar Perfil</h2>
+          <form class="popup__form">
+            <fieldset class="popup__form-fieldset">
+              <input
+                class="popup__form-fieldsetInput"
+                type="text"
+                placeholder="Nome"
+                id="name"
+                maxlength="19"
+                required
+              />
+              <input
+                class="popup__form-fieldsetInput"
+                type="text"
+                placeholder="Sobre Mim"
+                id="about"
+                maxlength="20"
+                required
+              />
+            </fieldset>
+            <button type="submit" class="popup__save-button">Salvar</button>
           </form>
         </div>
       </section>
     </div>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
